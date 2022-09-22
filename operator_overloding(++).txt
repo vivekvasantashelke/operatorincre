@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+class increment_decremet
+{
+    int x,y;
+public:
+  void get(int a,int b)
+  {
+      x=a;y=b;
+  }
+  void set()
+  {
+      int a=7,b=8;
+      cout<<"enter input"<<endl;
+       cin>>a>>b;
+      get(a,b);
+  }
+
+  void display()
+  {
+      cout<<x<<" "<<y<<endl;
+
+  }
+
+increment_decremet operator ++()
+  {
+     increment_decremet temp;
+      temp.x=++x;
+      temp.y=++y;
+      return temp;
+  }
+
+
+};
+
+int main()
+{
+    increment_decremet c1,c2;
+    c1.set();
+     c2=++c1;
+    c2.display();
+}
