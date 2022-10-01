@@ -6,7 +6,7 @@ class increment_decremet
 {
     int x,y;
 public:
-  void get(int a,int b)
+  void get(int a,int b)//
   {
       x=a;y=b;
   }
